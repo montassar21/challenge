@@ -27,3 +27,22 @@ a:hover {
   width:250px;
   height:200px;
 }
+@media screen and (max-width: 1180px) {
+
+  .twoDivs {
+    display:flex;
+    flex-wrap: wrap;
+    margin: 50px;
+  }
+
+  .firstDiv {
+    width: 89%;
+    margin: 10px;
+
+  }
+
+  .secondDiv {
+    width: 89%;
+    margin: 40px;
+  }
+}
