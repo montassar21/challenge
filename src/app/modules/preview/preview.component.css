@@ -1,5 +1,17 @@
 * {
   border-radius: 10px;
+
+}
+body{
+  background-color: rgba(121, 58, 203, 0.6);
+}
+.parent{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+width:100%;
+    margin: 0;
 }
 
 h1 {
@@ -7,6 +19,10 @@ h1 {
   font-weight: bold;
 }
 
+body{
+  height: 100vh;
+  background-color: rgba(121, 58, 203, 0.6);
+}
 button {
   color: rgba(121, 58, 203, 0.9);
   border: 2px solid rgba(121, 58, 203, 0.4);
@@ -22,4 +38,10 @@ button:hover {
 
 a:hover {
   color: rgba(121, 58, 203, 0.9)
+}
+
+.card{
+justify-content: center;
+align-items: center;
+  /* Optional, for horizontal centering of content within the div */
 }
