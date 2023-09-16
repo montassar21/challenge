@@ -7,6 +7,9 @@ import { HomeComponent } from './modules/home/home.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { PreviewComponent } from './modules/preview/preview.component';
 import { NavbarComponent } from './modules/shared/navbar/navbar.component';
+import { FormControlDirective, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { NavbarComponent } from './modules/shared/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

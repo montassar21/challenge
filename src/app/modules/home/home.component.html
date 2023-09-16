@@ -55,64 +55,33 @@
 <div class="secondDiv col-8 me-5 "style="background-color: white;">
   <h1 class="m-2">Customize your links</h1>
   <p class="m-2">Add/edit/remove links below and then share all your profiles with the world!</p>
-  <button type="button" class="btn btn-outline-primary btn-lg btn-block w-100 m-1" ><i class="fa-solid fa-plus me-2"></i>Add new link</button>
+  <!-- Button trigger modal -->
+  <button type="button"  class="btn btn-outline-primary btn-lg btn-block w-100 m-1" (click)="openAddModel()" ><i class="fa-solid fa-plus me-2"></i>Add new link</button>
  <div class="row w-100 m-1">
-  <div class="h-50 mb-2" style="background-color: gainsboro;">
+  <div class="h-50 mb-2" style="background-color: gainsboro;"  *ngFor="let a of arr">
     <div class="card-body">
-      <div class="row justify-content-between m-2 w-100">
-        <div class="col-2">
+      <div class="row justify-content-between m-2 w-100" >
+        <div class="col-2" >
       <h5 class="card-title">Link #1</h5>
       </div>
       <div class="col-2">
       <a href="#" class="card-link">Remove</a>
       </div>
       </div>
-    <form>
       <div class="form-group m-2">
         <label for="exampleInputEmail1">Platform</label>
           <select class="form-control" id="exampleFormControlSelect1">
-            <option><i class="fa-brands fa-github">Github</i></option>
-            <option>Linkedin</option>
-            <option>Facebook</option>
-            <option>Instagram</option>
+            <option><i class="fa-brands fa-github"></i>{{a.platform}}</option>
           </select>
       </div>
       <div class="form-group m-1">
         <label for="exampleInputPassword1">Link</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="https://github.com/" disabled style="background-color: white;">
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="{{a.link}}" disabled style="background-color: white;">
       </div>
-    </form>
 
     </div>
   </div>
-  <div class="h-50 mb-2" style="background-color: gainsboro;">
-    <div class="card-body">
-      <div class="row justify-content-between m-2 w-100">
-        <div class="col-2">
-          <h5 class="card-title">Link #1</h5>
-        </div>
-        <div class="col-2">
-          <a href="#" class="card-link">Remove</a>
-        </div>
-      </div>
-      <form>
-        <div class="form-group m-2">
-          <label for="exampleInputEmail1">Platform</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option><i class="fa-brands fa-github">Linkedin</i></option>
-            <option>Github</option>
-            <option>Facebook</option>
-            <option>Instagram</option>
-          </select>
-        </div>
-        <div class="form-group m-2">
-          <label for="exampleInputPassword1">Link</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="https://linkedin.com/" disabled
-            style="background-color: white;">
-        </div>
-      </form>
-    </div>
-  </div>
+
   <hr class="w-100 mt-1 mb-2">
   <div class="row justify-content-end mb-2">
     <div class="col-1">
@@ -120,4 +89,44 @@
 </div>
   </div>
 </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+            <form #form="ngForm">
+
+      <div class="modal-body">
+        <div class="form-control">
+          <label for="exampleInputEmail1">Platform</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="platform" [(ngModel)]="platform.platform">
+              <option><i class="fa-brands fa-linkedin"></i>Linkedin</option>
+              <option>Github</option>
+              <option>Facebook</option>
+              <option>Instagram</option>
+            </select>
+        </div>
+        <div class="form-control">
+          <label for="exampleInputPassword1">Link</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Link" name="link"  [(ngModel)]="platform.link">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="saveLink(form)" [disabled]="form.invalid">Save changes</button>
+      </div>
+            </form>
+
+    </div>
+
+  </div>
 </div>
