@@ -1,1 +1,136 @@
-<p>profile works!</p>
+<nav class="bg-gray-300 ms-5 me-5 m-4" style="background-color: white;border-radius: 10px;">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-shrink-0 items-center me-5  ">
+        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+          alt="Your Company">
+        <h1 class="m-2" style="font-weight: bold;">Devlinks</h1>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
+
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <a href="/" class="text-gray-500 trounded-md px-3 py-2 text-sm font-medium" aria-current="page"><i
+                class="fa-solid fa-link me-1"></i>Links</a>
+            <a href="/profile" class="text-white-500 rounded-md px-3 py-2 text-sm font-medium"  style="background-color:rgba(121,58,203,0.2); color:white"><i
+                class="fa-regular fa-user me-1"></i> Profile Details</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <a href="/preview" class="text-gray-500 rounded-md px-5 py-2 text-sm font-medium"
+          style="border:2px solid rgba(121,58,203,0.6); color: rgba(121,58,203);" aria-current="page">Preview</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="/" class=" block rounded-md px-3 py-2 text-base font-medium" aria-current="page"
+        style="color:rgba(121,58,203,0.9);background-color: rgba(121,58,203,0.2);"><i
+          class="fa-solid fa-link me-2"></i>Links</a>
+      <a href="/profile" class="text-gray-500 block rounded-md px-3 py-2 text-base font-medium"><i
+          class="fa-regular fa-user me-2"></i>Profile Details</a>
+
+    </div>
+  </div>
+</nav>
+<div class="flex m-1 row justify-between">
+  <div class="flex col-3 ms-5 justify-center align-items-center " style="background-color: white;height: 78vh">
+    <div>
+      <img style="position: relative;top:100px;" src="../../../assets/Diagramme sans nom.drawio (8).png">
+      <div style="position: relative;top:-300px;left: 52px;width:65px;height:60px;">
+          <img class="card-img-top ms-3" style="border-radius:50%;" src="../../../assets/profile-picture.jpeg" alt="Card image cap">
+         <br>
+
+      </div>
+      <div style="position: relative;bottom:250px;left:45px">
+      <h2 style="font-weight:bold;">Ben weight</h2>
+      <p>ben@gmail.com</p>
+      </div>
+      <div class="row" style="position: relative; bottom:220px; left:35px;width:150px;">
+        <a class="btn btn-dark m-1"><i class="fa-brands fa-github me-2"></i>Github <i
+            class="fa-solid fa-arrow-right ms-4"></i></a>
+        <a class="btn btn-danger m-1"><i class="fa-brands fa-linkedin me-2"></i>Linkedin <i
+            class="fa-solid fa-arrow-right ms-3"></i></a>
+        <a class="btn btn-primary m-1"><i class="fa-brands fa-facebook me-2"></i>Facebook<i
+            class="fa-solid fa-arrow-right ms-3"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-8 me-5 " style="background-color: white;">
+    <h1 class="m-2">Profile Details</h1>
+    <p class="m-2">Add your details to create a personal touch to your profile.</p>
+    <div class="row w-100 m-1">
+      <div class="h-50 mb-2" style="background-color: gainsboro;">
+          <div class="row justify-center align-items-center m-2 w-100">
+            <div class="col-2"><p>Profile picture</p></div>
+            <div class="col-7">
+                <img class="card-img-top ms-3 profile-picture" src="../../../assets/profile-picture.jpeg" alt="Card image cap">
+            </div>
+            <div class="col-3">
+              <p>Image must be below 1024*1024px<br>Use PNG, JPG, or BMP format.</p>
+            </div>
+          </div>
+      </div>
+      <div class="h-50 mb-2" style="background-color: gainsboro;">
+      <form class="m-2">
+        <div class="form-group row m-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">First Name*</label>
+          <div class="col-sm-10">
+            <input type="first_name" class="form-control" id="inputEmail3" placeholder="First Name">
+          </div>
+        </div>
+        <div class="form-group row m-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Last Name*</label>
+          <div class="col-sm-10">
+            <input type="last_name" class="form-control" id="inputPassword3" placeholder="Last Name">
+          </div>
+        </div>
+      <div class="form-group row m-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Email*</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputPassword3" placeholder="Email">
+        </div>
+      </div>
+      </form>
+      </div>
+      <hr class="w-100 mt-1 mb-2">
+      <div class="row justify-content-end mb-1">
+        <div class="col-1">
+          <button type="button" class="btn btn-primary"
+            style="background-color: rgba(121, 58, 203, 0.8);; color:white;">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>

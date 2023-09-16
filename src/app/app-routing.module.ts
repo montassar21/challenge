@@ -10,7 +10,16 @@ const routes: Routes = [
     component:HomeComponent,
     pathMatch: 'full'
   },
-
+{
+    path: 'profile',
+    component:ProfileComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'preview',
+    component:PreviewComponent,
+    pathMatch: 'full'
+  },
 
 ];
 

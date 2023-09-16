@@ -1,0 +1,29 @@
+* {
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+button {
+  color: rgba(121, 58, 203, 0.9);
+  border: 2px solid rgba(121, 58, 203, 0.4);
+  ;
+}
+
+button:hover {
+  background-color: rgba(121, 58, 203, 0.9);
+  color: white;
+  border: 2px solid rgba(121, 58, 203, 0.4);
+  ;
+}
+
+a:hover {
+  color: rgba(121, 58, 203, 0.9)
+}
+.profile-picture  {
+  width:250px;
+  height:200px;
+}
